@@ -24,7 +24,7 @@
     <%= label(:user, :password) %>
     <%= password_field(:user, :email) %><br><br>
     <%= submit_tag %>
--->
+
 
 <%= form_for(@user) do |f| %>
 
@@ -40,3 +40,13 @@
 <%= f.submit %>
 
 <% end %>
+-->
+
+<%# Simple Form Gem %>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :username, label: 'Username:', placeholder: "Username goes here!" %>
+  <%= f.input :email, label: 'Email:', placeholder: "example@example.com" %>
+  <%= f.input :password, label: 'Password:', hint: 'No special characters.'%>
+  <%= f.button :submit, placeholder: 'Create User' %>
+<% end %>
+
