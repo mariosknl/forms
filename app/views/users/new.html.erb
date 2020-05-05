@@ -29,13 +29,13 @@
 <%= form_for(@user) do |f| %>
 
   <%= f.label(:username) %>
-  <%= f.text_field :username, placeholder: "Your username here" %><br /><br />
+  <%= f.text_field(:username, placeholder: "Your username here") %><br /><br />
 
   <%= f.label(:email) %>
-  <%= f.text_field :email, placeholder: "test@example.com" %><br /><br />
+  <%= f.text_field(:email, placeholder: "test@example.com") %><br /><br />
 
   <%= f.label(:password) %>
-  <%= f.password_field :password %><br /><br />
+  <%= f.password_field(:password) %><br /><br />
 
 <%= f.submit %>
 
